@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import Logo from "../components/Logo";
-import Button from "../components/Button";
+import Button from "../components/ui/Button";
 
 export default function Welcome() {
+  const navigate = useNavigate();
+
   return (
     <main className="min-h-screen bg-[var(--color-background)]">
       <section className="mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-6 text-center">
@@ -16,6 +19,7 @@ export default function Welcome() {
           <Button
             icon="🍽️"
             label="Get Started"
+            onClick={() => navigate("/home")}
           />
         </div>
       </section>
